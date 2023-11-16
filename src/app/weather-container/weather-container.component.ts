@@ -20,7 +20,7 @@ export class WeatherContainerComponent implements OnInit {
   ngOnInit(): void {
     this.getWeather();
   }
-
+//hello
   getWeather() {
     this.weather$ = this.weatherService.getWeather(this.city, this.unit).pipe(
       tap((res) => {

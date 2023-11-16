@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { WeatherUnit } from './../../models/weather.enum';
 
 @Component({
@@ -6,13 +6,9 @@ import { WeatherUnit } from './../../models/weather.enum';
   templateUrl: './weather-unit-selector.component.html',
   styleUrls: ['./weather-unit-selector.component.scss'],
 })
-export class WeatherUnitSelectorComponent implements OnInit {
+export class WeatherUnitSelectorComponent{
   @Input() selectedUnit!: WeatherUnit;
   @Output() onChange = new EventEmitter<WeatherUnit>();
 
   WeatherUnit = WeatherUnit;
-  
-  constructor() {}
-
-  ngOnInit(): void {}
 }

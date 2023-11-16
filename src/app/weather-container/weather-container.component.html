@@ -6,9 +6,9 @@
 
     <div class="weather-card__body">
       <h3 class="title">{{ city | uppercase }}</h3>
-
+//weather$ creates observable and and it is suscribed usingasync pipe
       <app-weather-preview
-        [weather]="(weather$ | async)!"
+        [weather]="(weather$ | async)!" 
         [unit]="unit"
       ></app-weather-preview>
 
