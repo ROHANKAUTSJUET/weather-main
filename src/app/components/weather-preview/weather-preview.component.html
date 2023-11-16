@@ -1,0 +1,8 @@
+<div class="weather-preview" *ngIf="weather">
+  <img [src]="weather.iconUrl" alt="weather icon" />
+  <p class="text">Temperature: {{ weather.temperature }} °{{ weatherUnit }}</p>
+  <p class="text">Summary: {{ weather.summary }}</p>
+  <p class="text">Feels like: {{ weather.feelsLikeTemp }} °{{ weatherUnit }}</p>
+  <p class="text">Pressure: {{ weather.pressure }} hPa</p>
+  <p class="text">Humidity: {{ weather.humidity }} %</p>
+</div>

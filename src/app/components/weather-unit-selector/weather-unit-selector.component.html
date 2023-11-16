@@ -1,0 +1,9 @@
+<mat-radio-group
+  [(ngModel)]="selectedUnit"
+  (change)="onChange.next(selectedUnit)"
+  class="weather-unit-selector"
+  aria-label="Select a weather unit"
+>
+  <mat-radio-button [value]="WeatherUnit.Imperial">°F</mat-radio-button>
+  <mat-radio-button [value]="WeatherUnit.Metric">°C</mat-radio-button>
+</mat-radio-group>

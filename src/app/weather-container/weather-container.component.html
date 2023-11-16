@@ -1,0 +1,25 @@
+<div class="weather-container">
+  <div class="weather-card">
+    <div class="weather-card__header">
+      <app-weather-form (onChange)="changeCity($event)"></app-weather-form>
+    </div>
+
+    <div class="weather-card__body">
+      <h3 class="title">{{ city | uppercase }}</h3>
+
+      <app-weather-preview
+        [weather]="(weather$ | async)!"
+        [unit]="unit"
+      ></app-weather-preview>
+
+      <p class="error-message">{{ errorMsg }}</p>
+    </div>
+
+    <div class="weather-card__footer">
+      <app-weather-unit-selector
+        [selectedUnit]="unit"
+        (onChange)="changeUnit($event)"
+      ></app-weather-unit-selector>
+    </div>
+  </div>
+</div>
